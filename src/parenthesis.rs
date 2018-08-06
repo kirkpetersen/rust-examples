@@ -23,5 +23,8 @@ pub fn parenthesis_match(s: &str) -> bool {
 
 #[test]
 fn it_verifies_parenthesis() {
+    assert_eq!(parenthesis_match(""), true);
     assert_eq!(parenthesis_match("()"), true);
+    assert_eq!(parenthesis_match(")("), false);
+    assert_eq!(parenthesis_match("(()"), false);
 }
