@@ -15,3 +15,7 @@ a Trie for dealing with things like IP routes.
 
 * enum? struct? both?
 * always have a root node with 0.0.0.0/0 (or ::/0)?
+* trait for the key stored in the trie? Something like "Cidr",
+  with the ability to iterate over the bits, as well as construct new Cidr
+  objects based on the parent + left|right
+* value?

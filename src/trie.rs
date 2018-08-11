@@ -21,5 +21,10 @@ fn check_the_trie_stuff() {
         r: None
     };
 
+    match t {
+        TrieNode { value: 0x01, key: x, .. } => println!("value: {}", x),
+        _ => println!("not sure?")
+    }
+
     println!("t: {:#?}", t);
 }
