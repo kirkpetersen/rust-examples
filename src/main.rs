@@ -2,9 +2,11 @@
 
 mod duplicates;
 mod parenthesis;
+mod trie;
 
 use duplicates::*;
 use parenthesis::*;
+use trie::*;
 
 use std::net::{IpAddr, Ipv4Addr, Ipv6Addr};
 
@@ -46,4 +48,6 @@ fn main() {
         Ok(addr) => println!("addr: {}", addr),
         Err(e) => println!("could't parse! {}", e)
     }
+
+    println!("x: {:?}", TrieNode::new(0x0a010101, 0x01))
 }
